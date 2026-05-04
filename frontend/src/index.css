@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #0a0c0f;
+  color: #c8d8e8;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Scanline overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0c0f; }
+::-webkit-scrollbar-thumb { background: #1a2030; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #00ff88; }
+
+::selection { background: rgba(0,255,136,0.25); color: #00ff88; }
+
+.green-glow { box-shadow: 0 0 20px rgba(0,255,136,0.2), inset 0 0 20px rgba(0,255,136,0.02); }
+.text-glow { text-shadow: 0 0 10px rgba(0,255,136,0.5); }
+
+.prose-terminal p { margin: 0 0 0.5rem; }
+.prose-terminal code {
+  background: rgba(0,255,136,0.1);
+  border: 1px solid rgba(0,255,136,0.2);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  color: #00ff88;
+}
+.prose-terminal pre {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid #1a2030;
+  border-left: 3px solid #00ff88;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+.prose-terminal pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #c8d8e8;
+}
