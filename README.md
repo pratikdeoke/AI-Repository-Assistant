@@ -97,33 +97,23 @@ AI-Repository-Assistant/
 └── README.md
 ```
 
-# Architecture
+## Architecture
 
-GitHub Repository URL
-          │
-          ▼
-Repository Cloning
-          │
-          ▼
-Repository Parsing
-          │
-          ▼
-Chunking
-          │
-          ▼
-Gemini Embeddings
-          │
-          ▼
-FAISS Vector Store
-          │
-          ▼
-Semantic Retrieval
-          │
-          ▼
-Gemini LLM
-          │
-          ▼
-Context-Aware Answer
+```mermaid
+graph TD
+    A[GitHub Repository URL] --> B[Repository Cloning]
+    B --> C[Repository Parsing]
+    C --> D[Chunking]
+    D --> E[Gemini Embeddings]
+    E --> F[FAISS Vector Store]
+    F --> G[Semantic Retrieval]
+    G --> H[Gemini LLM]
+    H --> I[Context-Aware Answer]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style I fill:#bbf,stroke:#333,stroke-width:2px
+
+```
 
 ---
 
@@ -299,4 +289,3 @@ This project demonstrates practical implementation of:
 # License
 
 This project is licensed under the MIT License.
-```
