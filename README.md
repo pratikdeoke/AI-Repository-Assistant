@@ -233,20 +233,6 @@ docker-compose up --build
 
 ---
 
-# Screenshots
-
-## Home Interface
-
-_Add screenshot here_
-
----
-
-## Repository Chat Interface
-
-_Add screenshot here_
-
----
-
 # Example Queries
 
 - Explain project architecture
