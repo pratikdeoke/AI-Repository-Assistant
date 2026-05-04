@@ -110,8 +110,8 @@ graph TD
     G --> H[Gemini LLM]
     H --> I[Context-Aware Answer]
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style I fill:#bbf,stroke:#333,stroke-width:2px
+    <!-- style A fill:#f9f,stroke:#333,stroke-width:2px
+    style I fill:#bbf,stroke:#333,stroke-width:2px -->
 
 ```
 
