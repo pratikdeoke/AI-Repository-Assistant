@@ -95,6 +95,7 @@ AI-Repository-Assistant/
 │   └── tailwind.config.js
 │
 └── README.md
+```
 
 # Architecture
 
